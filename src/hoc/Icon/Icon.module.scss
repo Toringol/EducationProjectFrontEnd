@@ -1,0 +1,10 @@
+.Container {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Darken:active {
+    filter: brightness(80%);
+}

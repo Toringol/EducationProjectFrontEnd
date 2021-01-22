@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+.Text {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+
+.SizeTitle1 {
+    font-size: 56px;
+    line-height: 68.26px;
+}
+
+.SizeTitle5 {
+    font-size: 18px;
+    line-height: 21.94px;
+}
+
+.SizeRegular {
+    font-size: 14px;
+    line-height: 17.07px;
+}
+
+.SubText {
+    font-size: 12px;
+    line-height: 14.63px;
+}
+
+// Font weight
+
+.WeightRegular {
+    font-weight: 400;
+}
+
+.WeightMedium {
+    font-weight: 500;
+}
+
+.WeightBold {
+    font-weight: 700;
+}
+
+// Effects
+
+.Inline {
+    display: inline;
+}
+
+.SingleLineClamp {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* stylelint-disable */
+.MultiLineClamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+    overflow: hidden;
+}
+/* stylelint-enable */
