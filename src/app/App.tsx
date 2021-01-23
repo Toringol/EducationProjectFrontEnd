@@ -1,8 +1,14 @@
 import * as React from 'react';
-import { MainPage } from '../pages/MainPage/MainPage';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { MainPage, LogInPage } from 'pages';
 
 export const App: React.FunctionComponent = () => {
   return (
-    <MainPage />
+    <Router>
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route exact path="/login" component={LogInPage} />
+      </Switch>
+    </Router>
   );
 }

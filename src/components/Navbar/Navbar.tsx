@@ -1,12 +1,16 @@
 import * as React from 'react';
 import * as types from './Navbar.types';
 import styles from './Navbar.module.scss';
-import { LogoIcon } from '../../icons';
+import { LogoIcon } from 'icons';
+import { useHistory } from 'react-router-dom';
 import {
-    TextBlock
+    TextBlock,
+    Button
 } from '..';
 
 export const Navbar: React.FunctionComponent<types.INavbarProps> = props => {
+    let history = useHistory();
+
     return (
         <div className={styles.Navbar}>
             <div className={styles.NavPanel}>
@@ -19,7 +23,13 @@ export const Navbar: React.FunctionComponent<types.INavbarProps> = props => {
                 <TextBlock className={styles.CorcesText} fontSize={'regular'}>Cources</TextBlock>
             </div>
             <div className={styles.UserInfo}>
-                <TextBlock className={styles.LogInText} fontSize={'regular'}>LogIn</TextBlock>
+                <Button
+                    className={styles.Button}
+                    onClick={event => history.push("/login")}
+                    color={'green'}
+                    title={'Log In'}
+                    rounded
+                />
             </div> 
         </div>
     )

@@ -2,11 +2,12 @@ import * as React from 'react';
 import styles from './MainPage.module.scss';
 import {
     Navbar,
-    TextBlock
-} from '../../components';
+    TextBlock,
+    Button
+} from 'components';
 import {
     MainPageIcon
-} from '../../icons/index';
+} from 'icons';
 
 export const MainPage: React.FunctionComponent = props => {
     return (
@@ -32,13 +33,13 @@ export const MainPage: React.FunctionComponent = props => {
                         here you can find everything to your taste, earn archivements, compete <br />
                         with friends and grow as a specialist
                     </TextBlock>
-                    <TextBlock
-                        className={styles.Text}
-                        fontSize={'regular'}
-                        fontWeight={'regular'}
-                    >
-                        Start Now
-                    </TextBlock>
+                    <Button
+                        className={styles.Button}
+                        onClick={event => console.log("Clicked to Button")}
+                        color={'green'}
+                        title={'Start Now'}
+                        rounded
+                    />
                 </div>
                 <MainPageIcon 
                     className={styles.MainPageIcon}

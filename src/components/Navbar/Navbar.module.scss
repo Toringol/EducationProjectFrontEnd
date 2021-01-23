@@ -1,3 +1,5 @@
+$main-color: #373D3F;
+
 .Navbar {
     display: flex;
     align-items: center;
@@ -15,11 +17,11 @@
 .CorcesText,
 .LogoIcon {
     margin: 24px 0px 24px 88px;
-    color: #373D3F;
+    color: $main-color;
 }
 
 .LogInText {
-    color: #373D3F;
+    color: $main-color;
 }
 
 .UserInfo {
