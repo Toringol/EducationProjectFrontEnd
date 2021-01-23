@@ -1,0 +1,41 @@
+$text-primary: #373D3F;
+$text-secondary: #fdfdfd;
+$button-submit: #00C5C6;
+$button-cancel: #B80F02;
+
+
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 28px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 45px;
+}
+
+.Button:hover {
+    background-color: $button-submit;
+    transition: background-color 0.3s linear;
+}
+
+.Button:hover .Title {
+    color: $text-secondary;
+    transition: color 0.3s linear;
+}
+
+.Title {
+    text-align: center;
+    color: $text-primary;
+}
+
+// Colors
+
+.Green {
+    border: 1px solid $button-submit;
+}
+
+.Red {
+    border: 1px solid $button-cancel;
+}
+

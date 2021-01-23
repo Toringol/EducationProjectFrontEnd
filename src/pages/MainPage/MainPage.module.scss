@@ -1,3 +1,6 @@
+$text-primary: #373D3F;
+$text-secondary: #86868B;
+
 .MainPage {
     position: relative;
 }
@@ -5,7 +8,7 @@
 .Content {
     display: flex;
     align-items: center;
-    color: #373D3F;
+    color: $text-primary;
 }
 
 .Title {
@@ -16,7 +19,7 @@
     margin-left: 139px;
     margin-bottom: 35px;
     width: 60%;
-    color: #86868B;
+    color: $text-secondary;
 }
 
 .Text {
@@ -24,12 +27,13 @@
     margin-bottom: 35px;
 }
 
-.MainPageIcon {
-
+.Button {
+    float: left;
+    margin-left: 139px;
+    margin-bottom: 35px;
 }
 
-.StartNowText {
-
+.MainPageIcon {
 }
 
 .Footer {
@@ -39,5 +43,5 @@
 }
 
 .FooterText {
-    color: #86868B;
+    color: $text-secondary;
 }
