@@ -1,0 +1,27 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(55, 61, 63, 0.2);
+}
+
+.NavPanel {
+    display: flex;
+    align-items: center;
+}
+
+.HomeText, 
+.BlogText, 
+.CorcesText,
+.LogoIcon {
+    margin: 24px 0px 24px 88px;
+    color: #373D3F;
+}
+
+.LogInText {
+    color: #373D3F;
+}
+
+.UserInfo {
+    margin-right: 88px;
+}
