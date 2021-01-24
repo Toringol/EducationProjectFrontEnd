@@ -2,6 +2,7 @@ import * as React from 'react';
 
 export type TFontSize =
     'title1'
+    | 'title2'
     | 'title5'
     | 'regular'
     | 'subtext';

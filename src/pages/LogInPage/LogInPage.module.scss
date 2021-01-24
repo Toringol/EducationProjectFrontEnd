@@ -1,0 +1,65 @@
+$text-primary: #373D3F;
+$text-secondary: #86868B;
+$text-highlight: #FFFFFF;
+$main-color: #00C5C6;
+
+.LogInPage {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Card {
+    display: flex;
+    flex-direction: row;
+}
+
+.SignInBlock {
+    margin: 94px 129px 94px 129px;
+}
+
+.SignUpBlock {
+    background: linear-gradient(200.1deg, $main-color 0%, rgba(5, 169, 180, 0) 100%, rgba(0, 251, 253, 0.0416667) 100%);
+    border-radius: 0px 20px 20px 0px;
+}
+
+.Services {
+    display: flex;
+    flex-direction: row;
+    margin: 37px 0px 37px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ServiceGoogleText {
+    margin: 0px 23px 0px 23px;
+}
+
+.SignInText {
+    color: $main-color;
+}
+
+.GreetingsText {
+    color: $text-highlight;
+}
+
+.Footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.FooterText {
+    color: $text-secondary;
+}

@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import {
     TextBlock,
     Button
-} from '..';
+} from 'components';
 
 export const Navbar: React.FunctionComponent<types.INavbarProps> = props => {
     let history = useHistory();
