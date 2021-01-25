@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as types from './Navbar.types';
+import classNames from 'classnames/bind';
 import styles from './Navbar.module.scss';
 import { LogoIcon } from 'icons';
 import { useHistory } from 'react-router-dom';
@@ -9,6 +10,7 @@ import {
 } from 'components';
 
 export const Navbar: React.FunctionComponent<types.IProps> = props => {
+    const { activePage } = props; 
     let history = useHistory();
 
     return (
@@ -18,9 +20,42 @@ export const Navbar: React.FunctionComponent<types.IProps> = props => {
                     className={styles.LogoIcon}
                     size={32}
                 />
-                <TextBlock className={styles.HomeText} fontSize={'regular'}>Home</TextBlock>
-                <TextBlock className={styles.BlogText} fontSize={'regular'}>Blog</TextBlock>
-                <TextBlock className={styles.CorcesText} fontSize={'regular'}>Cources</TextBlock>
+                <TextBlock
+                    className={
+                        classNames(
+                            styles.HomeText,
+                            (activePage === 'home' ? styles.Active : null)
+                        )
+                    } 
+                    fontSize={'regular'}
+                    onClick={() => history.push('/')}
+                >
+                    Home
+                </TextBlock>
+                <TextBlock
+                    className={
+                        classNames(
+                            styles.BlogText,
+                            (activePage === 'blog' ? styles.Active : null)
+                        )
+                    } 
+                    fontSize={'regular'}
+                    onClick={() => history.push('/')}
+                >
+                    Blog
+                </TextBlock>
+                <TextBlock
+                    className={
+                        classNames(
+                            styles.CorcesText,
+                            (activePage === 'cources' ? styles.Active : null)
+                        )
+                    }
+                    fontSize={'regular'}
+                    onClick={() => history.push('/')}
+                >
+                    Cources
+                </TextBlock>
             </div>
             <div className={styles.UserInfo}>
                 <Button

@@ -24,7 +24,7 @@ export const SignUpPage: React.FunctionComponent = props => {
 
     return (
         <div className={styles.SignUpPage}>
-            <Navbar />
+            <Navbar activePage={'login'}/>
             <div className={styles.Content}>
                 <Card className={styles.Card}>
                 <div className={styles.SignInBlock}>

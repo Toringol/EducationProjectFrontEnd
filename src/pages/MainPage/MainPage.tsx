@@ -12,7 +12,7 @@ import {
 export const MainPage: React.FunctionComponent = props => {
     return (
         <div className={styles.MainPage}>
-            <Navbar />
+            <Navbar activePage={'home'}/>
             <div className={styles.Content}>
                 <div className={styles.TextView}>
                     <TextBlock 
