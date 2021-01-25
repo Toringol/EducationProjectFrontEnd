@@ -3,7 +3,7 @@ $text-secondary: #86868B;
 $text-highlight: #FFFFFF;
 $main-color: #00C5C6;
 
-.LogInPage {
+.SignUpPage {
     position: relative;
     height: 100%;
     display: flex;
@@ -28,7 +28,9 @@ $main-color: #00C5C6;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 94px 129px 94px 129px;
+    padding: 0px 56px 0px 56px;
+    background: linear-gradient(160.03deg, #00C5C6 0%, rgba(5, 169, 180, 0) 100%, rgba(0, 251, 253, 0.0416667) 100%);
+    border-radius: 20px 0px 0px 20px;
 }
 
 .SignUpBlock {
@@ -36,9 +38,7 @@ $main-color: #00C5C6;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0px 56px 0px 56px;
-    background: linear-gradient(200.1deg, $main-color 0%, rgba(5, 169, 180, 0) 100%, rgba(0, 251, 253, 0.0416667) 100%);
-    border-radius: 0px 20px 20px 0px;
+    margin: 94px 129px 94px 129px;
 }
 
 .Services {
@@ -63,16 +63,15 @@ $main-color: #00C5C6;
     color: $text-secondary;
 }
 
-.InfoTextPassword {
-    margin-bottom: 23px;
-    color: $text-primary;
+.InputBlockEmail {
+    margin-top: 16px;
 }
 
 .InputBlockPassword {
     margin: 16px 0px 23px 0px;
 }
 
-.SignInText {
+.SignUpText {
     color: $main-color;
 }
 

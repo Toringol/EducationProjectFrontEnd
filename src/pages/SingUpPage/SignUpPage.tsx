@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './LogInPage.module.scss';
+import styles from './SignUpPage.module.scss';
 import {
     Navbar,
     Card,
@@ -9,7 +9,7 @@ import {
 } from 'components';
 import { useHistory } from 'react-router-dom';
 
-export const LogInPage: React.FunctionComponent = props => {
+export const SignUpPage: React.FunctionComponent = props => {
     const [text, setText] = React.useState('');
     const [password, setPassword] = React.useState('');
     const history = useHistory();
@@ -23,17 +23,43 @@ export const LogInPage: React.FunctionComponent = props => {
     };
 
     return (
-        <div className={styles.LogInPage}>
+        <div className={styles.SignUpPage}>
             <Navbar />
             <div className={styles.Content}>
                 <Card className={styles.Card}>
-                    <div className={styles.SignInBlock}>
+                <div className={styles.SignInBlock}>
                         <TextBlock
-                            className={styles.SignInText}
+                            className={styles.GreetingsText}
                             fontSize={'title2'}
                             fontWeight={'bold'}
                         >
-                            Sign in to Education+
+                            Welcome Back!
+                        </TextBlock>
+                        <TextBlock
+                            className={styles.GreetingsTextInfo}
+                            fontSize={'regular1'}
+                            fontWeight={'regular'}
+                        >
+                            To keep connected with us please <br/>
+                            login with your personal info
+                        </TextBlock>
+                        <Button
+                            className={styles.ButtonSignIn}
+                            onClick={event => history.push('login')}
+                            color={'white'}
+                            title={'Sign In'}
+                            titleSize={'regular'}
+                            titleWeight={'medium'}
+                            rounded
+                        />
+                    </div>
+                    <div className={styles.SignUpBlock}>
+                        <TextBlock
+                            className={styles.SignUpText}
+                            fontSize={'title2'}
+                            fontWeight={'bold'}
+                        >
+                            Create Account
                         </TextBlock>
                         <div className={styles.Services}>
                             <Button
@@ -69,9 +95,16 @@ export const LogInPage: React.FunctionComponent = props => {
                             fontSize={'regular1'}
                             fontWeight={'regular'}
                         >
-                            or use your email account:
+                            or use your email for registration:
                         </TextBlock>
                         <InputBlock
+                            text={text}
+                            type={'user'}
+                            maxLength={30}
+                            onChange={onChangeText.bind(this)}
+                        />
+                        <InputBlock
+                            className={styles.InputBlockEmail}
                             text={text}
                             type={'email'}
                             maxLength={30}
@@ -84,43 +117,10 @@ export const LogInPage: React.FunctionComponent = props => {
                             maxLength={26}
                             onChange={onChangePassword.bind(this)}
                         />
-                        <TextBlock
-                            className={styles.InfoTextPassword}
-                            fontSize={'regular1'}
-                            fontWeight={'regular'}
-                        >
-                            Forgot your password?
-                        </TextBlock>
-                        <Button
-                            className={styles.ButtonSignIn}
-                            onClick={event => console.log("Clicked to Button")}
-                            color={'green'}
-                            title={'Sign In'}
-                            titleSize={'regular'}
-                            titleWeight={'medium'}
-                            rounded
-                        />
-                    </div>
-                    <div className={styles.SignUpBlock}>
-                        <TextBlock
-                            className={styles.GreetingsText}
-                            fontSize={'title2'}
-                            fontWeight={'bold'}
-                        >
-                            Hello, friend!
-                        </TextBlock>
-                        <TextBlock
-                            className={styles.GreetingsTextInfo}
-                            fontSize={'regular1'}
-                            fontWeight={'regular'}
-                        >
-                            Enter your personal details <br/>
-                            and start jorney with us
-                        </TextBlock>
                         <Button
                             className={styles.ButtonSignUp}
-                            onClick={event => history.push('signup')}
-                            color={'white'}
+                            onClick={event => console.log("Clicked to Button")}
+                            color={'green'}
                             title={'Sign Up'}
                             titleSize={'regular'}
                             titleWeight={'medium'}

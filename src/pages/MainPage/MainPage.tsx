@@ -38,6 +38,8 @@ export const MainPage: React.FunctionComponent = props => {
                         onClick={event => console.log("Clicked to Button")}
                         color={'green'}
                         title={'Start Now'}
+                        titleSize={'regular'}
+                        titleWeight={'medium'}
                         rounded
                     />
                 </div>

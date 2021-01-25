@@ -8,7 +8,7 @@ import {
     Button
 } from 'components';
 
-export const Navbar: React.FunctionComponent<types.INavbarProps> = props => {
+export const Navbar: React.FunctionComponent<types.IProps> = props => {
     let history = useHistory();
 
     return (
@@ -28,6 +28,8 @@ export const Navbar: React.FunctionComponent<types.INavbarProps> = props => {
                     onClick={event => history.push("/login")}
                     color={'green'}
                     title={'Log In'}
+                    titleSize={'regular'}
+                    titleWeight={'medium'}
                     rounded
                 />
             </div> 
