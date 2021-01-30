@@ -3,43 +3,56 @@ $text-secondary: #86868B;
 
 .MainPage {
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .Content {
+    flex: 1;
+    color: $text-primary;
     display: flex;
     align-items: center;
-    color: $text-primary;
+    justify-content: center;
+}
+
+.TextView {
+    margin-left: 90px;
+    margin-right: 90px;
 }
 
 .Title {
-    margin: 0px 88px 180px 139px;
+    margin-bottom: 100px;
 }
 
 .Divider {
-    margin-left: 139px;
     margin-bottom: 35px;
-    width: 60%;
     color: $text-secondary;
 }
 
 .Text {
-    margin-left: 139px;
     margin-bottom: 35px;
 }
 
 .Button {
     float: left;
-    margin-left: 139px;
     margin-bottom: 35px;
+    border-radius: 45px;
+    padding: 12px 32px;
 }
 
 .MainPageIcon {
+    display: flex;
+    align-items: center;
+    margin-right: 90px;
 }
 
 .Footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .FooterText {

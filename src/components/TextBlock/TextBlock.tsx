@@ -6,6 +6,7 @@ import styles from './TextBlock.module.scss';
 const styleForFontSize = classNames.bind(
     {
         'title1': styles.SizeTitle1,
+        'title2': styles.SizeTitle2,
         'title5': styles.SizeTitle5,
         'regular': styles.SizeRegular,
         'subtext': styles.SubText,
