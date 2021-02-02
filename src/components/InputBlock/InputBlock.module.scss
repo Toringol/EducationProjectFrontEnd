@@ -1,0 +1,31 @@
+$main-color: #E4E4E4;
+$second-color: #86868B;
+$text-main: #373D3F;
+
+.InputBlock {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $main-color;
+    min-height: 50px;
+    min-width: 400px;
+}
+
+.Input {
+    background-color: $main-color;
+    color: $text-main;
+    border: 0px solid;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17.07px;
+    min-width: 300px;
+}
+
+.Input:focus{
+    outline: none;
+}
+
+.Icon {
+    margin: 0px 15px 0px 20px;
+}

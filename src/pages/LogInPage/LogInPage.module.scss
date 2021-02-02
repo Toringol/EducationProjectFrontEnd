@@ -1,0 +1,105 @@
+$text-primary: #373D3F;
+$text-secondary: #86868B;
+$text-highlight: #FFFFFF;
+$main-color: #00C5C6;
+
+.LogInPage {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Card {
+    display: flex;
+    flex-direction: row;
+}
+
+.SignInBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 94px 129px 94px 129px;
+}
+
+.SignUpBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 56px 0px 56px;
+    background: linear-gradient(200.1deg, $main-color 0%, rgba(5, 169, 180, 0) 100%, rgba(0, 251, 253, 0.0416667) 100%);
+    border-radius: 0px 20px 20px 0px;
+}
+
+.Services {
+    display: flex;
+    flex-direction: row;
+    margin: 23px 0px 23px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ServiceButtonYandex, .ServiceButtonGoogle, .ServiceButtonVk {
+    border-radius: 50%;
+    padding: 9px;
+}
+
+.ServiceButtonGoogle {
+    margin: 0px 23px 0px 23px;
+}
+
+.InfoText {
+    margin-bottom: 23px;
+    color: $text-secondary;
+}
+
+.InfoTextPassword {
+    margin-bottom: 23px;
+    color: $text-primary;
+}
+
+.InputBlockPassword {
+    margin: 16px 0px 23px 0px;
+}
+
+.SignInText {
+    color: $main-color;
+}
+
+.GreetingsText {
+    color: $text-highlight;
+    margin-bottom: 36px;
+}
+
+.GreetingsTextInfo {
+    text-align: center;
+    color: $text-highlight;
+    margin-bottom: 36px;
+}
+
+.ButtonSignIn, .ButtonSignUp {
+    border-radius: 45px;
+    padding: 12px 32px;
+}
+
+.Footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.FooterText {
+    color: $text-secondary;
+}

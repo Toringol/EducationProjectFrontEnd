@@ -1,0 +1,68 @@
+$text-primary: #373D3F;
+$text-secondary: #fdfdfd;
+$button-submit: #00C5C6;
+$button-submit-on-background: #FFFFFF;
+$button-cancel: #B80F02;
+$button-service: #C4C4C4;
+
+
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+// Colors
+
+.Green {
+    border: 1px solid $button-submit;
+}
+
+.Green .Title {
+    text-align: center;
+    color: $text-primary;
+}
+
+.Green:hover {
+    background-color: $button-submit;
+    transition: background-color 0.3s linear;
+}
+
+.Green:hover .Title {
+    color: $text-secondary;
+    transition: color 0.3s linear;
+}
+
+.Gray {
+    border: 1px solid $button-service;
+}
+
+.Gray .Title {
+    text-align: center;
+    color: $text-primary;
+}
+
+.White {
+    border: 1px solid $button-submit-on-background;
+}
+
+.White .Title {
+    color: $button-submit-on-background;
+}
+
+.White:hover {
+    background-color: $button-submit-on-background;
+    transition: background-color 0.3s linear;
+}
+
+.White:hover .Title {
+    color: $button-submit;
+    transition: color 0.3s linear;
+}
+
+.Red {
+    border: 1px solid $button-cancel;
+}
+
