@@ -10,12 +10,12 @@ import {
 import { useHistory } from 'react-router-dom';
 
 export const LogInPage: React.FunctionComponent = props => {
-    const [text, setText] = React.useState('');
+    const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const history = useHistory();
 
-    const onChangeText = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        setText(event.target.value);
+    const onChangeEmail = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setEmail(event.target.value);
     };
 
     const onChangePassword = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -72,10 +72,10 @@ export const LogInPage: React.FunctionComponent = props => {
                             or use your email account:
                         </TextBlock>
                         <InputBlock
-                            text={text}
+                            text={email}
                             type={'email'}
                             maxLength={30}
-                            onChange={onChangeText.bind(this)}
+                            onChange={onChangeEmail.bind(this)}
                         />
                         <InputBlock
                             className={styles.InputBlockPassword}

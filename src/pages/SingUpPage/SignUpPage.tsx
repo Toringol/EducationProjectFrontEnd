@@ -10,12 +10,17 @@ import {
 import { useHistory } from 'react-router-dom';
 
 export const SignUpPage: React.FunctionComponent = props => {
-    const [text, setText] = React.useState('');
+    const [name, setName] = React.useState('');
+    const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const history = useHistory();
 
-    const onChangeText = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        setText(event.target.value);
+    const onChangeName = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setName(event.target.value);
+    };
+
+    const onChangeEmail = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setEmail(event.target.value);
     };
 
     const onChangePassword = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -98,17 +103,17 @@ export const SignUpPage: React.FunctionComponent = props => {
                             or use your email for registration:
                         </TextBlock>
                         <InputBlock
-                            text={text}
+                            text={name}
                             type={'user'}
                             maxLength={30}
-                            onChange={onChangeText.bind(this)}
+                            onChange={onChangeName.bind(this)}
                         />
                         <InputBlock
                             className={styles.InputBlockEmail}
-                            text={text}
+                            text={email}
                             type={'email'}
                             maxLength={30}
-                            onChange={onChangeText.bind(this)}
+                            onChange={onChangeEmail.bind(this)}
                         />
                         <InputBlock
                             className={styles.InputBlockPassword}
