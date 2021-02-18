@@ -37,7 +37,10 @@ export const SignUpPage: React.FunctionComponent = props => {
             password: password
         };
 
-        ApiProfile.postSignUp(signUpData);
+        (async () => {
+            const data = await ApiProfile.postSignUp(signUpData);
+            console.log(data);
+        })();
     };
 
     return (

@@ -7,6 +7,7 @@ import {
     InputBlock,
     Button
 } from 'components';
+import { ApiProfile, LogInData } from 'api';
 import { useHistory } from 'react-router-dom';
 
 export const LogInPage: React.FunctionComponent = props => {
@@ -20,6 +21,20 @@ export const LogInPage: React.FunctionComponent = props => {
 
     const onChangePassword = (event: React.ChangeEvent<HTMLInputElement>): void => {
         setPassword(event.target.value);
+    };
+
+    const onSubmitButtonClick = (event: React.MouseEvent<HTMLDivElement>): void => {
+        if (!email || !password) return;
+
+        let logInData: LogInData = {
+            email: email,
+            password: password
+        };
+
+        (async () => {
+            const data = await ApiProfile.postLogIn(logInData);
+            console.log(data);
+        })();
     };
 
     return (
@@ -93,7 +108,7 @@ export const LogInPage: React.FunctionComponent = props => {
                         </TextBlock>
                         <Button
                             className={styles.ButtonSignIn}
-                            onClick={event => console.log("Clicked to Button")}
+                            onClick={onSubmitButtonClick.bind(this)}
                             color={'green'}
                             title={'Sign In'}
                             titleSize={'regular'}

@@ -18,14 +18,14 @@ export class ApiProfile {
                 body: JSON.stringify(logInData)
             })
             .then((response) => {
-                return response.json();
+                return response;
             })
             .catch((err) => {
-                console.log(err);
+                return err;
             })
     }
 
-    static postSignUp(signUpData: SignUpData): Promise<Response | void> {
+    static async postSignUp(signUpData: SignUpData): Promise<UserData> {
         return fetch(API.signup,
             {
                 method: "POST",
@@ -40,7 +40,7 @@ export class ApiProfile {
                 return response;
             })
             .catch((err) => {
-                console.log(err);
+                return err;
             })
     }
 }
